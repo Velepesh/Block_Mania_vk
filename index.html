@@ -204,7 +204,8 @@
       // Настраиваем лого во время загрузочного экрана
       loading_logo.style.backgroundImage = "url(logo.png)" ;
 
-      document.body.style.backgroundImage = "url('background.jpg')";
+      // Настраиваем фон полос по бокам
+      document.body.style.backgroundImage = "url(background.png)" ;
 
       // Настраиваем фон загрузочного экрана
       loading_bg.style.backgroundImage = "url(background.png)" ;
@@ -443,6 +444,9 @@
 
       let bridgeOptions = {
         platforms: {
+                    'vk_play': {
+                        gameId: '39760'
+                    },
           }
       }
 
@@ -460,14 +464,14 @@
                     }
 
                     let unityLoader = document.createElement('script')
-                    unityLoader.src = 'Build/igb_withoutVKPLAY.loader.js'
+                    unityLoader.src = 'Build/igb_25.08.17.20.loader.js'
                     unityLoader.onload = () => {
                         createUnityInstance(
                             canvas,
                             {
-                                dataUrl: 'Build/igb_withoutVKPLAY.data.unityweb',
-                                frameworkUrl: 'Build/igb_withoutVKPLAY.framework.js.unityweb',
-                                codeUrl: 'Build/igb_withoutVKPLAY.wasm.unityweb',
+                                dataUrl: 'Build/igb_25.08.17.20.data.unityweb',
+                                frameworkUrl: 'Build/igb_25.08.17.20.framework.js.unityweb',
+                                codeUrl: 'Build/igb_25.08.17.20.wasm.unityweb',
                                 streamingAssetsUrl: 'StreamingAssets',
                                 companyName: 'Gamingmonk',
                                 productName: 'Blockomania',
